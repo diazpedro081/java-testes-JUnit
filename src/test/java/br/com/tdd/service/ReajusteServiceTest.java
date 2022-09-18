@@ -18,7 +18,7 @@ public class ReajusteServiceTest {
         ReajusteService service = new ReajusteService();
         Funcionario funcionario = new Funcionario("Ana", LocalDate.now(), new BigDecimal(1000.00));
 
-        service.concederReajusteADesejar(funcionario, Desempenho.A_DESEJAR);
+        service.concederReajuste(funcionario, Desempenho.A_DESEJAR);
 
         assertEquals(new BigDecimal("1030.00"), funcionario.getSalario());
 
@@ -29,7 +29,7 @@ public class ReajusteServiceTest {
         ReajusteService service = new ReajusteService();
         Funcionario funcionarioDois = new Funcionario("Paulo", LocalDate.now(), new BigDecimal(1000.00));
 
-        service.concederReajusteBom(funcionarioDois, Desempenho.BOM);
+        service.concederReajuste(funcionarioDois, Desempenho.BOM);
 
         assertEquals(new BigDecimal("1150.00"), funcionarioDois.getSalario());
     }
@@ -39,7 +39,7 @@ public class ReajusteServiceTest {
         ReajusteService service = new ReajusteService();
         Funcionario funcionarioTres = new Funcionario("Amanda", LocalDate.now(), new BigDecimal(1000.00));
 
-        service.concederReajusteOtimo(funcionarioTres, Desempenho.OTIMO);
+        service.concederReajuste(funcionarioTres, Desempenho.OTIMO);
 
         assertEquals(new BigDecimal("1200.00"), funcionarioTres.getSalario());
     }
